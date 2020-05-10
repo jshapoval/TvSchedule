@@ -1,0 +1,72 @@
+Time: 14.04.2020 02:54:29 
+-----------------------------------------------------------
+Message: Cannot instantiate implementation type 'TvScheduleUpdateService.BackgroundServices.ChannelWorker' for service type 'Microsoft.Extensions.Hosting.IHostedService'.
+StackTrace:    at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at TvScheduleUpdateService.Program.Main(String[] args) in C:\Users\Professional\source\repos\TvScheduleUpdateService\Program.cs:line 23
+Source: Microsoft.Extensions.DependencyInjection
+TargetSite: Void Populate()
+-----------------------------------------------------------
+
+Time: 14.04.2020 03:13:04 
+-----------------------------------------------------------
+Message: Cannot instantiate implementation type 'TvScheduleUpdateService.BackgroundServices.ChannelWorker' for service type 'Microsoft.Extensions.Hosting.IHostedService'.
+StackTrace:    at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at TvScheduleUpdateService.Program.Main(String[] args) in C:\Users\Professional\source\repos\TvScheduleUpdateService\Program.cs:line 23
+Source: Microsoft.Extensions.DependencyInjection
+TargetSite: Void Populate()
+-----------------------------------------------------------
+
+Time: 14.04.2020 03:32:22 
+-----------------------------------------------------------
+Message: Cannot instantiate implementation type 'TvScheduleUpdateService.BackgroundServices.ChannelWorker' for service type 'Microsoft.Extensions.Hosting.IHostedService'.
+StackTrace:    at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at TvScheduleUpdateService.Program.Main(String[] args) in C:\Users\Professional\source\repos\TvScheduleUpdateService\Program.cs:line 23
+Source: Microsoft.Extensions.DependencyInjection
+TargetSite: Void Populate()
+-----------------------------------------------------------
+
+Time: 14.04.2020 05:01:47 
+-----------------------------------------------------------
+Message: Cannot instantiate implementation type 'TvScheduleUpdateService.BackgroundServices.ChannelWorker' for service type 'Microsoft.Extensions.Hosting.IHostedService'.
+StackTrace:    at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at TvScheduleUpdateService.Program.Main(String[] args) in C:\Users\Professional\source\repos\TvScheduleUpdateService\Program.cs:line 23
+Source: Microsoft.Extensions.DependencyInjection
+TargetSite: Void Populate()
+-----------------------------------------------------------
+
