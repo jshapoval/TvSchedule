@@ -72,6 +72,21 @@ namespace TvScheduleUpdateService
             Log(message, LogLevel.Information);
         }
 
+        public static void LogInfo(Exception ex)
+        {
+            string message = string.Format("Time: {0}", DateTime.UtcNow.ToString("dd/MM/yyyy hh:mm:ss tt"));
+
+            message += Environment.NewLine;
+            message += "-----------------------------------------------------------";
+            message += Environment.NewLine;
+            message += "Запрошена остановка сервиса";
+            message += Environment.NewLine;
+            message += "-----------------------------------------------------------";
+            message += Environment.NewLine;
+
+            Log(message, LogLevel.Information);
+        }
+
         public static void LogWarning(WarningException warning)
         {
             string message = string.Format("Time: {0}", DateTime.UtcNow.ToString("dd/MM/yyyy hh:mm:ss tt"));

@@ -89,6 +89,12 @@ namespace TvScheduleUpdateService.BackgroundServices
 
                     await Task.Delay(TimeSpan.FromMinutes(3), stoppingToken).ConfigureAwait(false);
                 }
+
+                catch (OperationCanceledException ex)
+                {
+                    LogHelper.LogInfo(ex);
+                }
+
                 catch (Exception ex)
                 {
                     LogHelper.LogError(ex);
