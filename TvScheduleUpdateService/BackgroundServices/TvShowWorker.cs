@@ -85,7 +85,7 @@ namespace TvScheduleUpdateService.BackgroundServices
                                                 x.UpdatedUtc = DateTime.UtcNow;
                                             });
 
-                                            //ялшяк рнцдю ашкн декюрэ лепф нрдекэмн, юодеир нрдекэмн х щднпюодеир нрдекэмн?
+                                           
                                         }
                                         catch (WarningException wEx)
                                         {

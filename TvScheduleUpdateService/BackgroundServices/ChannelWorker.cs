@@ -36,8 +36,7 @@ namespace TvScheduleUpdateService.BackgroundServices
                     var apiClient = new TvYandexApiClient();
                     var schedule = await apiClient.GetSchedule(DateTime.UtcNow);
 
-                    //теперь из каждой записи беру канал, смотрю имеется ли такой в базе. смотрю обновить или добавить
-                    //?пока обрабатываю каналы, нужно ли их все блочить?
+                   
 
                     var idApiList = new List<int>();
                     foreach (var item in schedule.schedule.schedules)
@@ -65,7 +64,7 @@ namespace TvScheduleUpdateService.BackgroundServices
                                     x.Description = channel.channel.title;
                                     x.UpdatedUtc = DateTime.UtcNow;
                                     x.IdFromApi = channel.channel.id;
-                                });//?все-таки нью чаннел передаю, не дбэнтити?   
+                                });  
                             }
 
                             else

@@ -18,12 +18,7 @@ namespace TvSchedule.Data.Data
         public class BulkOperation<V> : IDisposable where V : IDbEntity
 
         {
-            public string DestinationTableName { get; set; } //добавила как в библиотеке zBulkOperation
-            public int BatchSize { get; set; }
-            public bool AutoMapOutputDirection { get; set; }
-            public bool AutoMapOutputIdentity { get; set; }
-
-            public void Dispose() 
+           public void Dispose() 
             {
                 Commit();
                 Console.Beep();
@@ -70,7 +65,7 @@ namespace TvSchedule.Data.Data
 
                 if (_context.EntityInfo.PrimaryKeyColumns.Length == 1 && _context.EntityInfo.Autoincrement)
                 {
-                    if (!newColumnValues.ContainsKey(_context.EntityInfo.PrimaryKeyColumns[0].Name) || newColumnValues[_context.EntityInfo.PrimaryKeyColumns[0].Name].Equals(0))//
+                    if (!newColumnValues.ContainsKey(_context.EntityInfo.PrimaryKeyColumns[0].Name) || newColumnValues[_context.EntityInfo.PrimaryKeyColumns[0].Name].Equals(0))
                     {
                         emptyPK = true;
                     }
@@ -98,7 +93,6 @@ namespace TvSchedule.Data.Data
                         {
                             var column = new DataColumn();
                             column.ColumnName = _context.EntityInfo.PrimaryKeyColumns[i].Name;
-                            //нужно ли тип
 
                             if (_context.EntityInfo.Autoincrement == true)
                             {
@@ -174,7 +168,6 @@ namespace TvSchedule.Data.Data
                         foreach (var uc in _context.EntityInfo.UniqueConstraints)
                         {
                             var constraint = new object[_context.EntityInfo.UniqueConstraints.Length];
-                            //new object[10]; 
 
                             foundRow = _dataTable.Rows.Find(constraint);
 
@@ -303,7 +296,7 @@ namespace TvSchedule.Data.Data
                     columnNamesAndTypes.Add(string.Concat("[",columnNames[i],"]", " ", columnsTypesForSql[i], " ", columnAllowNull[i]));
                 }
 
-                for (int i = 0; i < columnNames.Count; i++)//DIFF_Changed!!!!!!!!!!!
+                for (int i = 0; i < columnNames.Count; i++)
                 {
                     if (!columnNames[i].Contains("_Changed") && !columnNames[i].Contains("Merge"))
                     {
@@ -323,7 +316,7 @@ namespace TvSchedule.Data.Data
                     }
                 }
 
-                for (int i = 0; i < columnNames.Count; i++)//DIFF_Changed?
+                for (int i = 0; i < columnNames.Count; i++)
                 {
                     if (_context.EntityInfo.PrimaryKeyColumns.Length == 1 &&
                             _context.EntityInfo.Autoincrement)
@@ -392,7 +385,7 @@ namespace TvSchedule.Data.Data
                         CREATE TYPE [{0}_{1}] AS TABLE(
                         {2} 
                         )", _context.TableName, dataTableHash, String.Join(",\n", columnNamesAndTypes 
-                     ));//OBJECT_ID(N'[{0}_{1}]', N'U')
+                     ));
 
                     SqlCommand checkCommand = new SqlCommand(queryForCheckTableType, connection);
                      checkCommand.ExecuteNonQuery();
@@ -451,7 +444,7 @@ namespace TvSchedule.Data.Data
             {
                 if (newColumnValue.Value != null && newColumnValue.Value.ToString() != "0" && !newColumnValue.Value.Equals(default(DateTime)))
                 {
-                    if (newColumnValue.Value.GetType() == typeof(DateTime)) //newColumnValue.Key.Contains("Date")  .ToString()=="0"
+                    if (newColumnValue.Value.GetType() == typeof(DateTime))
                     {
                         var timeFormat = (DateTime)newColumnValue.Value;
                         valuesForInsert.Add(string.Concat("'", timeFormat.ToString("yyyy-MM-ddTHH\\:mm\\:ss.fffffffzzz"), "'"));
@@ -673,7 +666,7 @@ namespace TvSchedule.Data.Data
                 var queryForDelete = string.Format(
                     @"UPDATE {0} SET IsDeleted = 1 WHERE {1}", TableName, String.Join(" AND ", conditions)
                 );
-                //Id = 1, Name = ''
+                
 
                 SqlCommand checkCommand = new SqlCommand(queryForDelete, connection);
                 checkCommand.ExecuteNonQuery();
@@ -721,11 +714,7 @@ namespace TvSchedule.Data.Data
         {
             throw new NotImplementedException();
         }
-        //protected virtual (K fkey, string skey) GetKey(V value)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
+      
         protected SqlDataContextBase(DbEntityInfo info)
         {
             EntityInfo = info;
@@ -750,9 +739,9 @@ namespace TvSchedule.Data.Data
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.HasRows) // если есть данные
+                    if (reader.HasRows) 
                     {
-                        while (reader.Read()) // построчно считываем данные
+                        while (reader.Read()) 
                         {
                             result.Add(CreateValue(reader));
                         }
@@ -774,9 +763,9 @@ namespace TvSchedule.Data.Data
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.HasRows) // если есть данные
+                    if (reader.HasRows) 
                     {
-                        while (reader.Read()) // построчно считываем данные
+                        while (reader.Read()) 
                         {
                             return CreateValue(reader);
                         }
@@ -791,7 +780,7 @@ namespace TvSchedule.Data.Data
             TryLockProtected(value, interval);
         }
 
-        protected bool TryLockProtected(V value, TimeSpan interval, string lockSessionId = null, string lockSessionIdFieldName = null, string lockExpireFieldName = null)//, string lockSessionId
+        protected bool TryLockProtected(V value, TimeSpan interval, string lockSessionId = null, string lockSessionIdFieldName = null, string lockExpireFieldName = null)
         {
             var selectRowByPrimaryKey = "Id = " + GetKey(value);
             var query = string.Format(@"SELECT TOP 1 Id INTO #tmp FROM {0}

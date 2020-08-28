@@ -89,7 +89,6 @@ namespace TvScheduleUpdateService
             var apiUrl =
                 $"https://tv.yandex.ru/api/39?date={date:yyyy-MM-dd}&period=all-day";
             var request = new HttpRequestMessage(HttpMethod.Get, apiUrl);
-           // var id = apiChannelId;
 
             request.Headers.Add("X-Requested-With", "XMLHttpRequest");
             request.Headers.Add("X-TV-SK", SessionKey);

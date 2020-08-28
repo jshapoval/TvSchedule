@@ -33,7 +33,7 @@ namespace TvSchedule.Data.Data
 
         protected override string TableName { get { return "TvShows"; } }
 
-        //protected override int GetKey(TvShow value) { throw new NotImplementedException(); }
+       
 
         public void Display(SqlDataReader reader)
         {

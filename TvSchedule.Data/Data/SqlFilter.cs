@@ -80,7 +80,7 @@ namespace TvSchedule.Data.Data
 
         private static string AddQuotesIfString(object value)
         {
-            //return value is string ? string.Concat("'", value,"'") : value.ToString();
+            
 
             switch (value)
             {

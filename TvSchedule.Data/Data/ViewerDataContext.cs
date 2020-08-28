@@ -42,9 +42,9 @@ namespace TvSchedule.Data.Data
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.HasRows) // если есть данные
+                    if (reader.HasRows) 
                     {
-                        while (reader.Read()) // построчно считываем данные
+                        while (reader.Read()) 
                         {
                             return CreateValue(reader);
                         }
